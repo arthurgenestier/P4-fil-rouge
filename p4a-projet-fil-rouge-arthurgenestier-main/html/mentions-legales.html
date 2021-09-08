@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accueil - Blog intégra11y</title>
+
+        <!-- Reboot.css est un reset amélioré (avec des valeurs par défaut standardisées) https://getbootstrap.com/docs/4.1/content/reboot/ -->
+        <link rel="stylesheet" href="./assets/css/reboot.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Emmet: header+main -->
+            <header class="left" role="banner">
+                <div class="visuallyhidden">
+                    <a href="#main">Aller au contenu</a>
+                </div>
+                <!-- Emmet: h1+h2+p+nav>ul>li*3>a -->
+                <span class="site-title">Le blog des étudiants Intégra11y</span>
+                <div class="introduction">
+                    <span class="introduction__title">Dernières nouveautés <span class="introduction__subtitle">de nos étudiants</span></span>
+                    <p class="introduction__text">
+                        Le but de ce blog est de permettre aux étudiants de la formation Intégra11y de partager leurs sentiments, leurs hauts et leurs bas, leurs succès et leurs échecs, et ce, tout au long de la formation et même après.
+                    </p>
+                </div>
+                <nav class="menu" role="navigation">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="index.html" class="menu__link">Accueil</a></li>
+                        <li class="menu__item"><a href="la-formation.html" class="menu__link">La Formation</a></li>
+                        <li class="menu__item"><a href="les-exercices.html" class="menu__link">Les exercices</a></li>
+                        <li class="menu__item"><a href="apres-la-formation.html" class="menu__link">Après la formation</a></li>
+                        <li class="menu__item"><a href="a-la-maison.html" class="menu__link">À la maison</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="right">
+                <main role="main" id="main">
+                    <!-- Emmet: h2+article*4>a+h3+p>img+em+time^p+a{Continue Reading} -->
+                    <h1 class="right-title">Mentions légales</h1>
+                    <div class="posts">
+                        <article class="post post--single">
+                            <h2>Edition du site internet</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique molestiae earum nisi? Iure minus libero voluptatum nemo dolorum porro dolores cumque eius omnis reiciendis ut, accusantium aspernatur quam impedit ex dignissimos sequi culpa sapiente doloremque voluptas sint nostrum harum iste id. Ipsa atque eius corporis quas et placeat, a eveniet sequi quod animi iusto illo rerum dolore earum reprehenderit distinctio officia dolorem veritatis harum, blanditiis adipisci nesciunt non sunt perspiciatis. Expedita illo consequuntur quo! Magnam, quia neque. Necessitatibus esse ex dolorum, quisquam aliquam ut molestias magni doloremque excepturi dolorem eaque exercitationem iusto magnam! Autem, quo. Architecto deserunt id dolor.</p>
+                            <h2>Hébergement du site</h2>
+                            <p>Repudiandae, ratione culpa, maxime illo at facilis qui quidem atque sed itaque voluptate dolorem rerum. Nostrum qui quam quae non ab error inventore corporis ipsa minus earum. Corrupti cum aliquid beatae non fugiat enim quisquam ratione voluptas deleniti officiis rerum nisi tempora nihil delectus iure distinctio, illum aperiam facilis culpa aspernatur. Magni officia, amet exercitationem accusamus voluptate molestias nam corporis temporibus neque consequatur vel laborum blanditiis, necessitatibus id, veritatis architecto iusto aliquid totam. At, laudantium. Illo fugit sed saepe optio repellat nam cupiditate, earum mollitia pariatur tenetur quis amet magni minus quasi porro dolor repudiandae iure eum delectus a explicabo? Ex temporibus maiores molestiae tempore repudiandae ut iure cumque voluptatem quos vitae blanditiis ad voluptatum eligendi similique voluptate, qui quo commodi nam, quae iste beatae sapiente. Corrupti, consequatur. Consequatur culpa amet tenetur voluptates, repellendus omnis totam nulla architecto sit temporibus, sint nesciunt alias.</p>
+                        </article>
+                    </div>
+                </main>
+
+                <footer role="contentinfo">
+                    <ul class="footer-links">
+                      <li class="footer-links__item"><a class="footer-links__link" href="plan-du-site.html">Plan du site</a></li>
+                      <li class="footer-links__item"><a class="footer-links__link" href="mentions-legales.html" aria-current="page">Mentions légales</a></li>
+                      <li class="footer-links__item"><a class="footer-links__link" href="nous-contacter.html">Nous contacter</a></li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </body>
+
+</html>

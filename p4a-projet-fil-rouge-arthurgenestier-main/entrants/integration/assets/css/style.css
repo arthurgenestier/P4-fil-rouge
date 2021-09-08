@@ -1,0 +1,376 @@
+/**
+ * Base
+ */
+
+:root {
+  --brand-black: #000;
+  --brand-white: #fff;
+  --brand-black-transparent: rgba(0,0,0,0.6);
+  --brand-emperor: #555;
+  --brand-endeavor: #0056b3;
+  --brand-formation: #98dc62;
+  --brand-exercices: #ff7367;
+  --brand-maison: #0766f0;
+  --brand-alabaster: #f9f9f9;
+  --brand-gallery: #eaeaea;
+}
+
+/* -- import fonts -- */
+/* kreon-regular - latin */
+@font-face {
+  font-family: 'Kreon';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('../fonts/kreon-v24-latin-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/kreon-v24-latin-regular.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* kreon-700 - latin */
+@font-face {
+  font-family: 'Kreon';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+    url('../fonts/kreon-v24-latin-700.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/kreon-v24-latin-700.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  line-height: 2;
+  font-family: Kreon, sans-serif;
+}
+
+a {
+  color: var(--brand-endeavor);
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+video {
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+td,
+th {
+  text-align: center;
+}
+
+table img {
+  width: 3rem;
+}
+
+/* --- GAUCHE --- */
+
+.left {
+  padding: 3rem 2rem 1rem 2rem;
+  background-image: url(../images/nicole-mobile.jpg);
+  background-position: center center;
+  background-size: cover;
+  color: var(--brand-white);
+}
+
+/* breakpoint medium */
+@media screen and (min-width:600px) {
+  .left {
+    background-image: url(../images/nicole-medium.jpg);
+  }
+}
+
+/* breakpoint large */
+@media screen and (min-width:1200px) {
+  .left {
+    width: 50%;
+    padding: 1rem;
+    background-image: url(../images/nicole-large.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: var(--brand-white);
+
+    /* On répartit l'espace vertical en trop entre chaque élément */
+    display: flex;
+    flex-direction: column;
+
+    /* Comme on a changé le sens, justify-content change de sens aussi, et répartit verticalement les espaces */
+    justify-content: space-between;
+
+    /* Bonus défilement, on garde la partie de gauche figée */
+    position: fixed;
+
+    /* Comme l'élément est sorti flux, y'a plus de flex, et donc la hauteur est la hauteur minimum par rapport au contenu
+    => on force 100% de la height du navigateur */
+    height: 100vh;
+  }
+}
+
+/* breakpoint large */
+@media screen and (min-width:1200px) {
+  .right {
+    width: 50%;
+
+    /* Bonus défilement, on garde la partie de gauche figée
+  comme la partie de gauche est en dehors du flux,
+  la partie de droite, commence en haut à gauche
+  si on la veut à droite, on doit forcer le décalage */
+    margin-left: 50%;
+  }
+}
+
+.site-title {
+  color: var(--brand-white);
+  background-color: var(--brand-black-transparent);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* breakpoint large */
+@media screen and (min-width:1200px) {
+  .site-title {
+    text-align-last: left;
+  }
+}
+
+.introduction {
+  background-color: var(--brand-black-transparent);
+  padding: 1rem;
+  margin: 0.1rem 0;
+  text-align: right;
+
+  /* astuce améliorer la lisibilité sur fond clair */
+  text-shadow: 0 0 6px black;
+}
+
+.introduction__subtitle {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 0.8em;
+  /* 50% de ma font-size parent ( 24px car 1.5em) */
+}
+
+.menu {
+  text-align: center;
+  background-color: var(--brand-black-transparent);
+}
+
+/* breakpoint medium */
+@media screen and (min-width:600px) {
+  .menu {
+    text-align: right;
+  }
+}
+
+.menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__item {
+  display: inline-block;
+}
+
+.menu__link {
+  color: white;
+  font-weight: 700;
+  /* = bold */
+  font-size: 1.8rem;
+  padding: 0.8rem;
+
+  /* astuce pour lire du texte blanc, sur un fond blanc */
+  text-shadow: 0 0 6px black;
+}
+
+.menu__link:hover,
+.menu__link:focus {
+  background-color: rgba(0, 0, 180, 0.4);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.8rem;
+}
+
+.menu__link[aria-current="page"] {
+  background-color: rgba(0, 0, 255, 0.4);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.8rem;
+}
+
+/* --- DROITE --- */
+.right-title {
+  padding: 0 2rem;
+  background-color: var(--brand-alabaster);
+  margin: 0;
+  border-bottom: 0.1rem solid var(--brand-gallery);
+}
+
+/* breakpoint large */
+@media screen and (min-width:1200px) {
+  .right-title {
+    padding: 1.6rem 3.8rem;
+  }
+}
+
+.post {
+  border-right: 0.1rem solid var(--brand-gallery);
+  border-bottom: 0.1rem solid var(--brand-gallery);
+  padding: 2.2rem;
+}
+
+
+/* breakpoint medium */
+@media screen and (min-width:600px) {
+  .posts {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .post {
+    width: 50%;
+    border-right: 0.1rem solid var(--brand-gallery);
+    border-bottom: 0.1rem solid var(--brand-gallery);
+    padding: 2.2rem;
+  }
+
+  .post--single {
+    width: 100%;
+    border: 0;
+  }
+}
+
+/* breakpoint large */
+@media screen and (min-width:1200px) {
+}
+
+.post__category {
+  text-transform: uppercase;
+  color: var(--brand-white);
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  font-size: 1.4rem;
+  background-color: grey;
+  border-radius: 0.4rem;
+}
+
+/* les modifiers liés à .post__category */
+.post__category--formation {
+  background-color: var(--brand-formation);
+  color: var(--brand-emperor);
+}
+
+.post__category--formation:hover,
+.post__category--formation:focus {
+  background-color: var(--brand-emperor);
+  color: var(--brand-formation);
+}
+
+.post__category--exercices {
+  background-color: var(--brand-exercices);
+  color: var(--brand-black);
+}
+
+.post__category--exercices:hover,
+.post__category--exercices:focus {
+  background-color: var(--brand-black);
+  color: var(--brand-exercices);
+}
+
+.post__category--maison {
+  background-color: var(--brand-maison);
+  color: var(--brand-white);
+}
+
+.post__category--maison:hover,
+.post__category--maison:focus {
+  background-color: var(--brand-white);
+  color: var(--brand-maison);
+}
+
+.post__category:hover,
+.post__category:focus {
+  text-decoration: none;
+}
+
+.post__title {
+  margin: 2rem 0;
+  font-size: 2.1rem;
+}
+
+.post__infos {
+  font-size: 1.4rem;
+  color: var(--brand-emperor);
+  margin: 1rem 0;
+}
+
+.post__author-pic {
+  width: 2.4rem;
+}
+
+.post__author {
+  font-style: normal;
+  font-weight: bold;
+  color: var(--brand-black);
+}
+
+.post__link {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* footer */
+.footer-links {
+  margin: 0;
+  padding: 1.6rem 3.8rem;
+  background-color: var(--brand-alabaster);
+  list-style: none;
+  text-align: center;
+}
+
+.footer-links__item {
+  display: inline;
+}
+
+.footer-links__link {
+  padding: 0.8rem 1.2rem;
+  color: var(--brand-black);
+}
+
+.footer-links__link:hover,
+.footer-links__link:focus {
+  color: var(--brand-endeavor);
+}
+
+.visuallyhidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

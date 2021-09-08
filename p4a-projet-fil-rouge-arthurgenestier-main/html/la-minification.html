@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>La minification - Blog intégra11y</title>
+
+        <!-- Reboot.css est un reset amélioré (avec des valeurs par défaut standardisées) https://getbootstrap.com/docs/4.1/content/reboot/ -->
+        <link rel="stylesheet" href="./assets/css/reboot.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header class="left" role="banner">
+                <div class="visuallyhidden">
+                    <a href="#main">Aller au contenu</a>
+                </div>
+                <span class="site-title">Le blog des étudiants Intégra11y</span>
+                <div class="introduction">
+                    <span class="introduction__title">Dernières nouveautés <span class="introduction__subtitle">de nos étudiants</span></span>
+                    <p class="introduction__text">
+                        Le but de ce blog est de permettre aux étudiants de la formation Intégra11y de partager leurs sentiments, leurs hauts et leurs bas, leurs succès et leurs échecs, et ce, tout au long de la formation et même après.
+                    </p>
+                </div>
+                <nav class="menu" role="navigation">
+                    <ul class="menu__list">
+                      <li class="menu__item"><a href="index.html" class="menu__link">Accueil</a></li>
+                      <li class="menu__item"><a href="la-formation.html" class="menu__link">La Formation</a></li>
+                      <li class="menu__item"><a href="les-exercices.html" class="menu__link">Les exercices</a></li>
+                      <li class="menu__item"><a href="apres-la-formation.html" class="menu__link">Après la formation</a></li>
+                      <li class="menu__item"><a href="a-la-maison.html" class="menu__link">À la maison</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="right">
+                <main role="main" id="main">
+                    <h1 class="right-title">La minification</h1>
+                    <article class="post post--single">
+                        <a href="la-formation.html" class="post__category post__category--formation">La formation</a>
+                        <p class="post__infos">
+                            <img class="post__author-pic" src="./assets/images/icon-ohz.png" alt="Frederic Halna"> <em class="post__author">Frederic Halna</em> le
+                            <time datetime="2020-12-08">8 décembre 2020</time>
+                        </p>
+                        <p class="post__text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam praesentium molestias molestiae dolor suscipit! Earum eveniet veritatis aut eum odit, molestias nulla, culpa deleniti perferendis vero sit quo id cumque!
+                        </p>
+
+                        <code>.visuallyhidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}</code>
+
+                        <p class="post__text">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium quam doloremque ducimus dignissimos enim, impedit non laudantium, recusandae accusantium sit illo ipsa odio, omnis saepe. Assumenda nobis harum accusantium ea!
+                        </p>
+
+                        <code>.visuallyhidden{clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;overflow:hidden;position:absolute;white-space:nowrap;width:1px}</code>
+
+
+                    </article>
+                </main>
+
+                <footer role="contentinfo">
+                    <ul class="footer-links">
+                      <li class="footer-links__item"><a class="footer-links__link" href="plan-du-site.html">Plan du site</a></li>
+                      <li class="footer-links__item"><a class="footer-links__link" href="mentions-legales.html">Mentions légales</a></li>
+                      <li class="footer-links__item"><a class="footer-links__link" href="nous-contacter.html">Nous contacter</a></li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </body>
+
+</html>

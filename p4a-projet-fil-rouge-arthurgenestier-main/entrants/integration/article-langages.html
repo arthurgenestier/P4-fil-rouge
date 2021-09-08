@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Les langages abordés - Blog intégra11y</title>
+
+        <!-- Reboot.css est un reset amélioré (avec des valeurs par défaut standardisées) https://getbootstrap.com/docs/4.1/content/reboot/ -->
+        <link rel="stylesheet" href="./assets/css/reboot.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Emmet: header+main -->
+            <header class="left" role="banner">
+                <div class="visuallyhidden">
+                    <a href="#main">Aller au contenu</a>
+                </div>
+                <!-- Emmet: h1+h2+p+nav>ul>li*3>a -->
+                <h1 class="site-title">Le blog des étudiants Intégra11y</h1>
+                <div class="introduction">
+                    <h2 class="introduction__title">Dernières nouveautés <span class="introduction__subtitle">de nos étudiants</span></h2>
+                    <p class="introduction__text">
+                        Le but de ce blog est de permettre aux étudiants de la formation Intégra11y de partager leurs sentiments, leurs hauts et leurs bas, leurs succès et leurs échecs, et ce, tout au long de la formation et même après.
+                    </p>
+                </div>
+                <nav class="menu" role="navigation">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="" class="menu__link">Accueil</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">La Formation</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Les exercices</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Après la formation</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">A la maison</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="right">
+                <main role="main" id="main">
+                    <!-- Emmet: h2+article*4>a+h3+p>img+em+time^p+a{Continue Reading} -->
+                    <h2 class="right-title">Les langages abordés</h2>
+                    <article class="post post--single">
+                        <a href="" class="post__category post__category--formation">Formation</a>
+                        <p class="post__infos">
+                            <img class="post__author-pic" src="./assets/images/icon-ohz.png" alt="Frederic Halna"> <em class="post__author">Frederic Halna</em> le
+                            <time datetime="2020-12-08">8 décembre 2020</time>
+                        </p>
+                        <p class="post__text">
+                            Quels langages sont abordés dans la formation intégra11y ? Le tableau suivant vous détaille les langages, et la ou les parties de la formation où ils sont pratiqués.
+                        </p>
+
+                        <table>
+                            <caption>Répartition des langages par partie de la formation</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Parties</th>
+                                    <th id="th-html" scope="col">HTML</th>
+                                    <th id="th-css" scope="col">CSS</th>
+                                    <th id="th-php" scope="col">PHP</th>
+                                    <th id="th-javascript" scope="col">JavaScript</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Emmet: tr*6>th{Partie $}[id="th-xxx"]+td[headers="th-xxx th-xxx"]*2>img[src="./assets/images/check-mark.png" alt="oui"]^td[headers="th-xxx th-xxx"]*2>img[src="./assets/images/check-mark.png" alt="oui"] -->
+                                <tr>
+                                    <th id="th-partie1" scope="row">Partie 1</th>
+                                    <td headers="th-partie1 th-html"><img src="./assets/images/check-mark.png" alt="oui"></td>
+                                    <td headers="th-partie1 th-css"><img src="./assets/images/check-mark.png" alt="oui"></td>
+                                    <td headers="th-partie1 th-php"><img src="./assets/images/cross-mark.png" alt="non"></td>
+                                    <td headers="th-partie1 th-javascript"><img src="./assets/images/cross-mark.png" alt="non"></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-partie2" scope="row">Partie 2</th>
+                                    <td headers="th-partie2 th-html"><img src="./assets/images/check-mark.png" alt="oui"></td>
+                                    <td headers="th-partie2 th-css"><img src="./assets/images/check-mark.png" alt="oui"></td>
+                                    <td headers="th-partie2 th-php"><img src="./assets/images/cross-mark.png" alt="non"></td>
+                                    <td headers="th-partie2 th-javascript"><img src="./assets/images/cross-mark.png" alt="non"></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-partie3a" scope="row">Partie 3a</th>
+                                    <td headers="th-partie3a th-html"><img src="./assets/images/check-mark.png" alt="oui"></td>
+                                    <td headers="th-partie3a th-css"><img src="./assets/images/check-mark.png" alt="oui"></td>
+                                    <td headers="th-partie3a th-php"><img src="./assets/images/cross-mark.png" alt="non"></td>
+                                    <td headers="th-partie3a th-javascript"><img src="./assets/images/cross-mark.png" alt="non"></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-partie3b" scope="row">Partie 3b</th>
+                                    <td headers="th-partie3b th-html"><img src="./assets/images/check-mark.png" alt="oui"></td>
+                                    <td headers="th-partie3b th-css"><img src="./assets/images/check-mark.png" alt="oui"></td>
+                                    <td headers="th-partie3b th-php"><img src="./assets/images/check-mark.png" alt="oui"></td>
+                                    <td headers="th-partie3b th-javascript"><img src="./assets/images/check-mark.png" alt="oui"></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-partie4a" scope="row">Partie 4a</th>
+                                    <td headers="th-partie4a th-html"><img src="./assets/images/check-mark.png" alt="oui"></td>
+                                    <td headers="th-partie4a th-css"><img src="./assets/images/check-mark.png" alt="oui"></td>
+                                    <td headers="th-partie4a th-php"><img src="./assets/images/check-mark.png" alt="oui"></td>
+                                    <td headers="th-partie4a th-javascript"><img src="./assets/images/cross-mark.png" alt="non"></td>
+                                </tr>
+                                <tr>
+                                    <th id="th-partie4b" scope="row">Partie 4b</th>
+                                    <td headers="th-partie4b th-html"><img src="./assets/images/check-mark.png" alt="oui"></td>
+                                    <td headers="th-partie4b th-css"><img src="./assets/images/check-mark.png" alt="oui"></td>
+                                    <td headers="th-partie4b th-php"><img src="./assets/images/cross-mark.png" alt="non"></td>
+                                    <td headers="th-partie4b th-javascript"><img src="./assets/images/check-mark.png" alt="oui"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </main>
+
+                <footer role="contentinfo">
+                    <ul class="footer-links">
+                        <li class="footer-links__item"><a class="footer-links__link" href="plan-de-site.html">Plan de site</a></li>
+                        <li class="footer-links__item"><a class="footer-links__link" href="mentions-legales.html">Mentions légales</a></li>
+                        <li class="footer-links__item"><a class="footer-links__link" href="nous-contacter.html">Nous contacter</a></li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,5 @@
+# on ne versionne pas les fichiers/dossiers ci-dessous (utiles uniquement au formateur pour améliorer son code)
+vendor
+.vscode
+composer.json
+composer.lock

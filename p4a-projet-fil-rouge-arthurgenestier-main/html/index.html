@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accueil - Blog intégra11y</title>
+
+        <!-- Reboot.css est un reset amélioré (avec des valeurs par défaut standardisées) https://getbootstrap.com/docs/4.1/content/reboot/ -->
+        <link rel="stylesheet" href="./assets/css/reboot.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Emmet: header+main -->
+            <header class="left" role="banner">
+                <div class="visuallyhidden">
+                    <a href="#main">Aller au contenu</a>
+                </div>
+                <!-- Emmet: h1+h2+p+nav>ul>li*3>a -->
+                <h1 class="site-title">Le blog des étudiants Intégra11y</h1>
+                <div class="introduction">
+                    <h2 class="introduction__title">Dernières nouveautés <span class="introduction__subtitle">de nos étudiants</span></h2>
+                    <p class="introduction__text">
+                        Le but de ce blog est de permettre aux étudiants de la formation Intégra11y de partager leurs sentiments, leurs hauts et leurs bas, leurs succès et leurs échecs, et ce, tout au long de la formation et même après.
+                    </p>
+                </div>
+                <nav class="menu" role="navigation">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="index.html" class="menu__link" aria-current="page">Accueil</a></li>
+                        <li class="menu__item"><a href="la-formation.html" class="menu__link">La formation</a></li>
+                        <li class="menu__item"><a href="les-exercices.html" class="menu__link">Les exercices</a></li>
+                        <li class="menu__item"><a href="apres-la-formation.html" class="menu__link">Après la formation</a></li>
+                        <li class="menu__item"><a href="a-la-maison.html" class="menu__link">À la maison</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="right">
+                <main role="main" id="main">
+                    <!-- Emmet: h2+article*4>a+h3+p>img+em+time^p+a{Continue Reading} -->
+                    <h2 class="right-title">Derniers articles</h2>
+                    <div class="posts">
+                        <article class="post">
+                            <a href="la-formation.html" class="post__category post__category--formation">La formation</a>
+                            <h3 class="post__title">La minification</h3>
+                            <p class="post__infos">
+                                <img class="post__author-pic" src="./assets/images/icon-john.png" alt=""> <em class="post__author">John Marchill</em> le
+                                <time datetime="2019-07-21">21 Juillet 2019</time>
+                            </p>
+                            <p class="post__text">
+                                Qu'est-ce que cette technique ?<br>
+                                En quoi les performances du site internet vont être améliorées ?
+                            </p>
+                            <!-- Ici, "Lire la suite" n'est pas assez explicite
+                            on rajoute donc 2 attributs : title & aria-label
+                            https://www.accede-web.com/notices/html-et-css/liens-et-boutons/completer-les-liens-et-les-boutons-non-explicites-avec-aria-label-ou-title/ -->
+                            <a href="la-minification.html" class="post__link" title="Lire la suite : La minification" aria-label="Lire la suite : La minification">Lire la suite</a>
+                        </article>
+                        <article class="post">
+                            <a href="les-exercices.html" class="post__category post__category--exercices">Les exercices</a>
+                            <h3 class="post__title">Le pair programming pour les n00bs</h3>
+                            <p class="post__infos">
+                                <img class="post__author-pic" src="./assets/images/icon-dar.png" alt=""> <em class="post__author">Paul Darson</em> le
+                                <time datetime="2019-08-02">2 Août 2019</time>
+                            </p>
+                            <p class="post__text">
+                                Le pair programming pour les dévs, c'est un peu comme certains fromages : c'est mieux à deux.
+                            </p>
+                            <a href="" class="post__link" title="Lire la suite : Le pair programming pour les noobs" aria-label="Lire la suite : Le pair programming pour les noobs">Lire la suite</a>
+                        </article>
+                        <article class="post">
+                            <a href="a-la-maison.html" class="post__category post__category--maison">À la maison</a>
+                            <h3 class="post__title">Pourquoi j'aime PHP</h3>
+                            <p class="post__infos">
+                                <img class="post__author-pic" src="./assets/images/icon-ohz.png" alt=""> <em class="post__author">Bruce Ékoute</em> le
+                                <time datetime="2019-08-07">7 Août 2019</time>
+                            </p>
+                            <p class="post__text">
+                                PHP est le langage le plus répandu dans le Web. Je vous propose de faire le tour de toutes ces
+                                petites
+                                choses simples qui lui donnent une saveur si unique.
+                            </p>
+                            <a href="" class="post__link" title="Lire la suite : Pourquoi j'aime PHP" aria-label="Lire la suite : Pourquoi j'aime PHP">Lire la suite</a>
+                        </article>
+                        <article class="post">
+                            <a href="la-formation.html" class="post__category post__category--formation">La formation</a>
+                            <h3 class="post__title">Les langages abordés</h3>
+                            <p class="post__infos">
+                                <img class="post__author-pic" src="./assets/images/icon-spr.png" alt=""> <em class="post__author">Otis</em> le
+                                <time datetime="2019-09-05">5 Septembre 2019</time>
+                            </p>
+                            <p class="post__text">
+                              Quels langages sont abordés dans la formation intégra11y ? Le tableau suivant vous détaille les langages, et la ou les parties de la formation où ils sont pratiqués.
+                            </p>
+                            <a href="les-langages-abordes.html" class="post__link" title="Lire la suite : La situation de scribe" aria-label="Lire la suite : La situation de scribe">Lire la suite</a>
+                        </article>
+                        <article class="post">
+                            <a href="a-la-maison.html" class="post__category post__category--maison">À la maison</a>
+                            <h3 class="post__title">Le travail : pourquoi ce n'est jamais naturel ?</h3>
+                            <p class="post__infos">
+                                <img src="./assets/images/icon-tr.png" alt="" class="post__author-pic">
+                                <em class="post__author">Trouveur d'Éperon de Wyverne</em>
+                                le <time datetime="2019-09-06">6 Septembre 2019</time>
+                            </p>
+                            <p class="post__text">
+                                Le terme "travail" vient du latin "trepalium" qui signifie "torture". Voilà, je vous laisse avec
+                                ça.
+                            </p>
+                            <a href="" class="post__link" title="Lire la suite : Le travail : pourquoi ce n'est jamais naturel ?" aria-label="Lire la suite : Le travail : pourquoi ce n'est jamais naturel ?">Lire la suite</a>
+                        </article>
+                        <article class="post">
+                            <a href="a-la-maison.html" class="post__category post__category--maison">À la maison</a>
+                            <h3 class="post__title">Les chats augmentent la longévité</h3>
+                            <p class="post__infos">
+                                <img src="./assets/images/icon-tre.png" alt="" class="post__author-pic">
+                                <em class="post__author">Rincevent</em>
+                                le <time datetime="2019-09-27">27 Septembre 2019</time>
+                            </p>
+                            <p class="post__text">
+                                Jusqu'à un certain nombre. Au delà de 28 chats, les scientifiques semblent quelque peu
+                                sceptiques.
+                                Surtout sur l'aspect budgétaire...
+                            </p>
+                            <a href="" class="post__link" title="Lire la suite : Les chats augmentent la longévité" aria-label="Lire la suite : Les chats augmentent la longévité">Lire la suite</a>
+                        </article>
+                    </div>
+
+                    <nav class="pagination" role="navigation" aria-label="Posts navigation">
+                      <h2 class="visuallyhidden">Navigation des articles</h2>
+                      <div class="nav-links">
+                        <ul class="page-numbers">
+                          <li><a class="prev page-numbers" href=""><span class="visuallyhidden">Articles </span>précédents</a></li>
+                          <li><span aria-current="page" class="page-numbers" href=""><span class="visuallyhidden">Page </span>1</span></li>
+                          <li><a href="" class="page-numbers"><span class="meta-nav visuallyhidden">Page </span>2</a></li>
+                          <li><a href="" class="page-numbers"><span class="meta-nav visuallyhidden">Page </span>3</a></li>
+                          <li><a href="" class="page-numbers"><span class="meta-nav visuallyhidden">Page </span>4</a></li>
+                          <li><a href="" class="page-numbers"><span class="meta-nav visuallyhidden">Page </span>5</a></li>
+                          <li><a href="" class="page-numbers"><span class="meta-nav visuallyhidden">Page </span>6</a></li>
+                          <li><a class="next page-numbers" href=""><span class="visuallyhidden">Articles </span>suivants</a></li>
+                        </ul>
+                      </div>
+                    </nav>
+                </main>
+
+                <footer role="contentinfo">
+                    <ul class="footer-links">
+                      <li class="footer-links__item"><a class="footer-links__link" href="plan-du-site.html">Plan du site</a></li>
+                      <li class="footer-links__item"><a class="footer-links__link" href="mentions-legales.html">Mentions légales</a></li>
+                      <li class="footer-links__item"><a class="footer-links__link" href="nous-contacter.html">Nous contacter</a></li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+    </body>
+
+</html>
